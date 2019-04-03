@@ -152,213 +152,12 @@
 
 
      myChart1.setOption(option01);
+     window.addEventListener("resize",function(){
 
-    option03 = {
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-    grid: {
-        left: '5%',
-        right: '4%',
-        bottom: '2%',
-        y:-15,
-        containLabel: true
-    },
-    xAxis : [
-        {
-            position:'top',
-            axisLabel: {show: false},
-            axisTick: {show: false},
-            type : 'value'
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            axisTick : {show: false},
-            data : ['成单数','到店数','有效数','线索数']
-        }
-    ],
-    series : [
-        {
-            name:'',
-            type:'bar',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'inside'
-                }
-            },
-            data:[{
-                value:200,
-                 itemStyle: {
-                    normal: {
-                        color :'#f7707d'
-                    }
-                 }
-                },
-                {
-                value:170,
-                 itemStyle: {
-                    normal: {
-                        color :'#eac54b'
-                    }
-                 }
-                },
-                {
-                value:240,
-                 itemStyle: {
-                    normal: {
-                        color :'#45ad60'
-                    }
-                 }
-                },
-                {
-                 value:244,
-                 itemStyle: {
-                    normal: {
-                        color :'#0494db'
-                    }
-                }
-            }]
-        }
-    ]
-};
+                        myChart1.resize();
 
-option04 = {
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-     grid: {
-        left: '1%',
-        right: 30,
-        bottom: '2%',
-        y:-15,
-        containLabel: true
-    },
-    color:['#6acfff'],
-    xAxis : [
-        {
-            position:'top',
-            axisLabel: {show: false},
-            axisLine: {
-                lineStyle: {
-                    color: '#959595'
-                }
-            },
-            axisTick: {show: false},
-            type : 'value'
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            axisLine: {
-                lineStyle: {
-                    color: '#959595'
-                }
-            },
-            axisLabel: {show: false},
-            axisTick: {show: false},
-            data : ['成单数','到店数','有效数','线索数']
-        }
-    ],
-    series : [
-        {
-            name:'',
-            type:'bar',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'inside'
-                }
-            },
-            data:['200','130','200','300']
-        }
-    ]
-};
-         // myChart4.setOption(option04);
-
-     option05 = {
-         backgroundColor: '#2c343c',
-
-         title: {
-             text: '预期收益分布',
-             left: 'center',
-             top: 20,
-             textStyle: {
-                 color: '#ccc'
-             }
-         },
-
-         tooltip : {
-             trigger: 'item',
-             formatter: "{a} <br/>{b} : {c} ({d}%)"
-         },
-
-         visualMap: {
-             show: false,
-             min: 80,
-             max: 600,
-             inRange: {
-                 colorLightness: [0, 1]
-             }
-         },
-         series : [
-             {
-                 name:'预计收益分布',
-                 type:'pie',
-                 radius : '55%',
-                 center: ['50%', '50%'],
-                 data:[
-                     {value:400, name:'趣店'},
-                     {value:300, name:'华兴'},
-                     {value:15, name:'担保公司'},
-                     // {value:235, name:'华悦'},
-                     {value:100, name:'华悦'}
-                 ].sort(function (a, b) { return a.value - b.value; }),
-                 roseType: 'radius',
-                 label: {
-                     normal: {
-                         textStyle: {
-                             color: 'rgba(255, 255, 255, 0.3)'
-                         }
-                     }
-                 },
-                 labelLine: {
-                     normal: {
-                         lineStyle: {
-                             color: 'rgba(255, 255, 255, 0.3)'
-                         },
-                         smooth: 0.2,
-                         length: 10,
-                         length2: 20
-                     }
-                 },
-                 itemStyle: {
-                     normal: {
-                         color: '#c23531',
-                         shadowBlur: 200,
-                         shadowColor: 'rgba(0, 0, 0, 0.5)'
-                     }
-                 },
-
-                 animationType: 'scale',
-                 animationEasing: 'elasticOut',
-                 animationDelay: function (idx) {
-                     return Math.random() * 200;
-                 }
-             }
-         ]
-     };
-
-
+                });
+  
 
      option5 = {
          tooltip : {
@@ -436,31 +235,14 @@ option04 = {
              }
          ]
      };
-     // var ecConfig = require('echarts/config');
-     // myChart.on(ecConfig.EVENT.PIE_SELECTED, function (param){
-     //     var selected = param.selected;
-     //     var serie;
-     //     var str = '当前选择： ';
-     //     for (var idx in selected) {
-     //         serie = option.series[idx];
-     //         for (var i = 0, l = serie.data.length; i < l; i++) {
-     //             if (selected[idx][i]) {
-     //                 str += '【系列' + idx + '】' + serie.name + ' : ' +
-     //                     '【数据' + i + '】' + serie.data[i].name + ' ';
-     //             }
-     //         }
-     //     }
-     //     document.getElementById('wrong-message').innerHTML = str;
-     // })
-
-
-
-
-
-
-
-
+    
      myChart5.setOption(option5);
+     window.addEventListener("resize",function(){
+
+                        myChart5.resize();
+
+                });
+
      option08 = {
          color: ['#3398DB'],
          tooltip : {
@@ -500,6 +282,11 @@ option04 = {
      };
 
      myChart8.setOption(option08);
+     window.addEventListener("resize",function(){
+
+                        myChart8.resize();
+
+                });
 
 
      // 基于准备好的dom，初始化echarts实例
@@ -507,21 +294,7 @@ option04 = {
 
      // 指定图表的配置项和数据
      var option = {
-         // title: {
-         //     text: '业务指标', //标题文本内容
-         // },
-         // toolbox: { //可视化的工具箱
-         //     show: true,
-         //     feature: {
-         //         restore: { //重置
-         //             show: true
-         //         },
-         //         saveAsImage: {//保存图片
-         //             show: true
-         //         }
-         //     }
-         // },
-         tooltip: { //弹窗组件
+     tooltip: { //弹窗组件
              formatter: "{a} <br/>{b} : {c}%"
          },
          series: [{
@@ -535,11 +308,13 @@ option04 = {
 
      // 使用刚指定的配置项和数据显示图表。
      myChart.setOption(option);
+     window.addEventListener("resize",function(){
 
-     // setInterval(function(){//把option.series[0].data[0].value的值使用random()方法获取一个随机数
-     //     option.series[0].data[0].value = 500/25;
-     //     myChart.setOption(option, true);
-     // }, 2000);
+                        myChart.resize();
+
+                });
+
+
 
  </script>
  <!-- 日历 -->
