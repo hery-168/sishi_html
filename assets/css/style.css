@@ -19,7 +19,9 @@ body {
     font-family: 'Raleway', sans-serif;
     color: #666;
     margin-top: 75px;
-    background-color: #eeeeee;
+    /*background-color: #eeeeee;*/
+    /*background: url("../images/body_bg.jpg") repeat;*/
+    /*opacity: 0.5;*/
 }
 img {
     max-width: 100%;

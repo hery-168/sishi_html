@@ -111,6 +111,12 @@
          ]
      };
      myChart_sex.setOption(sex_option);
+               window.addEventListener("resize",function(){
+
+                        myChart_sex.resize();
+
+                });
+
 
      age_option = {
          title : {
@@ -156,6 +162,11 @@
          ]
      };
      myChart_age.setOption(age_option);
+          window.addEventListener("resize",function(){
+
+                        myChart_age.resize();
+
+                });
 
      edu_option = {
          title : {
@@ -206,6 +217,12 @@
          ]
      };
      myChart_edu.setOption(edu_option);
+      window.addEventListener("resize",function(){
+
+                        myChart_edu.resize();
+
+                });
+
 
      income_option = {
          title : {
@@ -246,6 +263,11 @@
          ]
      };
      myChart_income.setOption(income_option);
+        window.addEventListener("resize",function(){
+
+                        myChart_income.resize();
+
+                });
 
 
      option_city10 = {
@@ -286,6 +308,11 @@
          ]
      };
      myChart_city10.setOption(option_city10);
+      window.addEventListener("resize",function(){
+
+                        myChart_city10.resize();
+
+                });
 
 
      option_city = {
@@ -376,6 +403,11 @@
             ]
      };
      myChart_city.setOption(option_city);
+     window.addEventListener("resize",function(){
+
+                        myChart_city.resize();
+
+                });
  </script>
  <!-- 日历 -->
 <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap-datepicker.min.js"> </script>
