@@ -2153,7 +2153,7 @@ height:56px;
 .main_box {
     width: 100%;
     height:  6.28rem;
-    position: relative;
+    /*position: relative;*/
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -2167,18 +2167,16 @@ height:56px;
     text-align: center;
     font-size: 7rem;
     color: #ff2631;
-    position: absolute;
     top: 50%;
-    left: 45%;
+    display: block;
 }
 .main_box span {
 
-    display: inline-block;
+    text-align: center;
+    display: block;
     font-size: 0.2rem;
     color: #000000;
-    position: absolute;
     top: 24%;
-    left: 45%;
 }
 
 .inline_div3 {
@@ -2263,17 +2261,16 @@ height:56px;
     display: inline-block;
     font-size: 0.2rem;
     color: #000000;
-    position: absolute;
     top: 24%;
-    left: 29%;
+    text-align: center;
 }
 
 .t_small_div h2 {
  font-size: 4rem;
  color: #ff2631;
- position: absolute;
  top: 50%;
- left: 28%;
+ text-align: center;
+ display: block;
 }
 
 .t_rbox i {
