@@ -5,6 +5,7 @@ target/
 */gradle/
 */out/
 */.idea/
+*/.idea/*
 *.swp
 *.classpath
 *.project
