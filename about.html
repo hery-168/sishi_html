@@ -254,7 +254,7 @@
 
         <script type="text/javascript">
     var myChart_loan_2 = echarts.init(document.getElementById('container_loan_2'));
-	let option_loan_2 = {
+	  option_loan_2 = {
 		color: ['#28BBF4', '#F89B73', '#7778EF', '#69C8C7'],
 		//修改曲线颜色
 		title: {
@@ -374,7 +374,7 @@
 </script> 
 <script type="text/javascript">
     var myChart_repay_2 = echarts.init(document.getElementById('container_repay_2'));
-	let option_repay_2 = {
+      option_repay_2 = {
 		color: ['#28BBF4', '#F89B73', '#7778EF', '#69C8C7'],
 		//修改曲线颜色
 		title: {
@@ -494,7 +494,7 @@
 </script>
         <script type="text/javascript">
             var myChart_service_2 = echarts.init(document.getElementById('container_service_2'));
-            let option_service_2 = {
+            option_service_2 = {
                 color: ['#9FB6CD'],
                 title : {
                     subtext: '服务费收入'
@@ -561,13 +561,18 @@
             };
             // 使用刚指定的配置项和数据显示图表
             myChart_service_2.setOption(option_service_2, true); // 重新渲染曲线图
-            window.onresize = myChart_service_2.resize; // 图表随浏览器拉伸自动变化
+            window.addEventListener("resize",function(){
+
+                myChart_service_2.resize();
+
+            });
+
         </script>
 
 
         <script type="text/javascript">
             var myChart_history_2 = echarts.init(document.getElementById('container_history_2'));
-            let option_history_2 = {
+            option_history_2 = {
                 color: ['#CD3700'],
                 title : {
                     subtext: '历史逾期率'
@@ -638,7 +643,12 @@
 
             // 使用刚指定的配置项和数据显示图表
             myChart_history_2.setOption(option_history_2, true); // 重新渲染曲线图
-            window.onresize = myChart_history_2.resize; // 图表随浏览器拉伸自动变化
+            window.addEventListener("resize",function(){
+
+                myChart_history_2.resize();
+
+            });
+
         </script>
 		<script type="text/javascript">
 			$(function(){
