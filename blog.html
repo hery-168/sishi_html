@@ -271,6 +271,11 @@
 
 
      option_city10 = {
+         title : {
+             text: '城市TOP5',
+             // subtext: '纯属虚构',
+             x:'center'
+         },
          color: ['#3398DB'],
          tooltip : {
              trigger: 'axis',
@@ -287,7 +292,7 @@
          xAxis : [
              {
                  type : 'category',
-                 data : ['北京', '上海', '南京', '张家口', '唐山', '杭州', '天津'],
+                 data : ['北京', '上海', '南京', '张家口', '唐山'],
                  axisTick: {
                      alignWithLabel: true
                  }
@@ -303,7 +308,7 @@
                  name:'直接访问',
                  type:'bar',
                  barWidth: '60%',
-                 data:[630, 521, 488, 450, 300, 210, 180]
+                 data:[630, 521, 488, 450, 300]
              }
          ]
      };
