@@ -46,219 +46,171 @@
 <body>
 
 
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="logo">
-                    <h2><a href="index.html">华悦数金</a></h2>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <h2><a href="index.html">华悦数金</a></h2>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <div id="menu" class="menu">
-                    <ul>
-                        <li><a href="index.html">概况总览</a></li>
-                        <li><a href="about.html" class="active">业务曲线</a></li>
-                        <li><a href="blog.html">用户画像</a></li>
-                        <li><a href="contact.html">联系方式</a></li>
-                    </ul>
+                <div class="col-md-8">
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li><a href="index.html">概况总览</a></li>
+                            <li><a href="about.html" class="active">业务曲线</a></li>
+                            <li><a href="blog.html">用户画像</a></li>
+                            <li><a href="contact.html">联系方式</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </header>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+        <span style="color:#FFF;">放款-笔数、放款-金额</span>
     </div>
-</header>
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
-                    <span style="color:#FFF;">放款-笔数、放款-金额</span>
+    <div class="panel-body">
+        <ul id="myTab_loan">
+            <li class="active"><a href="#loan_money_week" data-toggle="tab"> 最近七日 </a></li>
+        </ul>
+        <div id="myTabContent_loan" class="tab-content">
+            <div class="tab-pane fade in" id="loan_money_t">
+                <div id="container_loan_1" style="height: 300px;">
+                    T + 1
                 </div>
-                <div class="panel-body">
-                    <ul id="myTab_loan" class="nav nav-tabs">
-                        <!--
-                                <li> <a href="#loan_money_t" data-toggle="tab"> T+1 </a> </li>
-                        -->
-                        <li class="active"><a href="#loan_money_week" data-toggle="tab"> 最近七日 </a></li>
-                        <!--   <li> <a href="#loan_money_month" data-toggle="tab"> 本月 </a> </li>
-                           <li> <a href="#loan_money_quarter" data-toggle="tab"> 本季度 </a> </li>
-                           <li> <a href="#loan_money_year" data-toggle="tab"> 本年度 </a> </li> -->
-                    </ul>
-                    <div id="myTabContent_loan" class="tab-content">
-                        <div class="tab-pane fade in" id="loan_money_t">
-                            <div id="container_loan_1" style="height: 300px;">
-                                T + 1
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in active" id="loan_money_week">
-                            <div id="container_loan_2" style="height: 300px;">
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="loan_money_month">
-                            <div id="container_loan_3" style="height: 300px;">
-                                Month
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="loan_money_quarter">
-                            <div id="container_loan_4" style="height: 300px;">
-                                Quarter
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="loan_money_year">
-                            <div id="container_loan_5" style="height: 300px;">
-                                Year
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="tab-pane fade in active" id="loan_money_week">
+                <div id="container_loan_2" style="height: 300px;">
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="loan_money_month">
+                <div id="container_loan_3" style="height: 300px;">
+                    Month
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="loan_money_quarter">
+                <div id="container_loan_4" style="height: 300px;">
+                    Quarter
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="loan_money_year">
+                <div id="container_loan_5" style="height: 300px;">
+                    Year
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
-                    <span style="color:#FFF;">还款-笔数、还款-金额</span>
+    <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+        <span style="color:#FFF;">还款-笔数、还款-金额</span>
+    </div>
+    <div class="panel-body">
+        <ul id="myTab_repay">
+            <li class="active"><a href="#repay_money_week" data-toggle="tab"> 最近七日 </a></li>
+        </ul>
+        <div id="myTabContent_repay" class="tab-content">
+            <div class="tab-pane fade in" id="repay_money_t">
+                <div id="container_repay_1" style="height: 300px;">
+                    T + 1
                 </div>
-                <div class="panel-body">
-                    <ul id="myTab_repay" class="nav nav-tabs">
-                        <!--<li> <a href="#repay_money_t" data-toggle="tab"> T+1 </a> </li> -->
-                        <li class="active"><a href="#repay_money_week" data-toggle="tab"> 最近七日 </a></li>
-                        <!--  <li> <a href="#repay_money_month" data-toggle="tab"> 本月 </a> </li>
-                          <li> <a href="#repay_money_quarter" data-toggle="tab"> 本季度 </a> </li>
-                          <li> <a href="#repay_money_year" data-toggle="tab"> 本年度 </a> </li> -->
-                    </ul>
-                    <div id="myTabContent_repay" class="tab-content">
-                        <div class="tab-pane fade in" id="repay_money_t">
-                            <div id="container_repay_1" style="height: 300px;">
-                                T + 1
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in active" id="repay_money_week">
-                            <div id="container_repay_2" style="height: 300px;">
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="repay_money_month">
-                            <div id="container_repay_3" style="height: 300px;">
-                                Month
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="repay_money_quarter">
-                            <div id="container_repay_4" style="height: 300px;">
-                                Quarter
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="repay_money_year">
-                            <div id="container_repay_5" style="height: 300px;">
-                                Year
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="tab-pane fade in active" id="repay_money_week">
+                <div id="container_repay_2" style="height: 300px;">
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="repay_money_month">
+                <div id="container_repay_3" style="height: 300px;">
+                    Month
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="repay_money_quarter">
+                <div id="container_repay_4" style="height: 300px;">
+                    Quarter
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="repay_money_year">
+                <div id="container_repay_5" style="height: 300px;">
+                    Year
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
-                <span style="color:#FFF;">服务费收入</span>
+    <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+        <span style="color:#FFF;">服务费收入</span>
+    </div>
+    <div class="panel-body">
+        <ul id="myTab_service_fee">
+            <li class="active"><a href="#service_fee_week" data-toggle="tab"> 最近七日 </a></li>
+        </ul>
+        <div id="myTabContent_service_fee" class="tab-content">
+            <div class="tab-pane fade in" id="service_fee_t">
+                <div id="container_service_1" style="height: 300px;">
+                    T + 1
+                </div>
             </div>
-            <div class="panel-body">
-                <ul id="myTab_service_fee" class="nav nav-tabs">
-                    <!--
-                                                    <li> <a href="#service_fee_t" data-toggle="tab"> T+1 </a> </li>
-                    -->
-                    <li class="active"><a href="#service_fee_week" data-toggle="tab"> 最近七日 </a></li>
-                    <!--<li> <a href="#service_fee_month" data-toggle="tab"> 本月 </a> </li>
-                    <li> <a href="#service_fee_quarter" data-toggle="tab"> 本季度 </a> </li>
-                    <li> <a href="#service_fee_year" data-toggle="tab"> 本年度 </a> </li>-->
-                </ul>
-                <div id="myTabContent_service_fee" class="tab-content">
-                    <div class="tab-pane fade in" id="service_fee_t">
-                        <div id="container_service_1" style="height: 300px;">
-                            T + 1
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in active" id="service_fee_week">
-                        <div id="container_service_2" style="height: 300px;">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="service_fee_month">
-                        <div id="container_service_3" style="height: 300px;">
-                            Month
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="service_fee_quarter">
-                        <div id="container_service_4" style="height: 300px;">
-                            Quarter
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="service_fee_year">
-                        <div id="container_service_5" style="height: 300px;">
-                            Year
-                        </div>
-                    </div>
+            <div class="tab-pane fade in active" id="service_fee_week">
+                <div id="container_service_2" style="height: 300px;">
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="service_fee_month">
+                <div id="container_service_3" style="height: 300px;">
+                    Month
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="service_fee_quarter">
+                <div id="container_service_4" style="height: 300px;">
+                    Quarter
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="service_fee_year">
+                <div id="container_service_5" style="height: 300px;">
+                    Year
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
-                <span style="color:#FFF;">历史逾期率</span>
+    <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+        <span style="color:#FFF;">历史逾期率</span>
+    </div>
+    <div class="panel-body">
+        <ul id="myTab_history_rate">
+            <li class="active"><a href="#history_rate_week" data-toggle="tab"> 最近七日 </a></li>
+        </ul>
+        <div id="myTabContent_history_rate" class="tab-content">
+            <div class="tab-pane fade in" id="history_rate_t">
+                <div id="container_history_1" style="height: 300px;">
+                    T + 1
+                </div>
             </div>
-            <div class="panel-body">
-                <ul id="myTab_history_rate" class="nav nav-tabs">
-                    <!--
-                                                <li> <a href="#history_rate_t" data-toggle="tab"> T+1 </a> </li>
-                    -->
-                    <li class="active"><a href="#history_rate_week" data-toggle="tab"> 最近七日 </a></li>
-                    <!--<li> <a href="#history_rate_month" data-toggle="tab"> 本月 </a> </li>
-                    <li> <a href="#history_rate_quarter" data-toggle="tab"> 本季度 </a> </li>
-                    <li> <a href="#history_rate_year" data-toggle="tab"> 本年度 </a> </li>-->
-                </ul>
-                <div id="myTabContent_history_rate" class="tab-content">
-                    <div class="tab-pane fade in" id="history_rate_t">
-                        <div id="container_history_1" style="height: 300px;">
-                            T + 1
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in active" id="history_rate_week">
-                        <div id="container_history_2" style="height: 300px;">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="history_rate_month">
-                        <div id="container_history_3" style="height: 300px;">
-                            Month
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="history_rate_quarter">
-                        <div id="container_history_4" style="height: 300px;">
-                            Quarter
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="history_rate_year">
-                        <div id="container_history_5" style="height: 300px;">
-                            Year
-                        </div>
-                    </div>
+            <div class="tab-pane fade in active" id="history_rate_week">
+                <div id="container_history_2" style="height: 300px;">
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="history_rate_month">
+                <div id="container_history_3" style="height: 300px;">
+                    Month
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="history_rate_quarter">
+                <div id="container_history_4" style="height: 300px;">
+                    Quarter
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="history_rate_year">
+                <div id="container_history_5" style="height: 300px;">
+                    Year
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 
 <script type="text/javascript">
     var myChart_loan_2 = echarts.init(document.getElementById('container_loan_2'));
