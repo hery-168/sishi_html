@@ -25,10 +25,10 @@
   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
   <style type="text/css">
   	.nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-    	color: #555;
+    	color: #FFF;
 	}
   	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	    color: #3398DB;
+	    color: #000;
 	}
 	.nav > li > a{
 		padding: 10px 9px;
@@ -69,16 +69,18 @@
    <div class="row"> 
     <div class="col-xs-12"> 
      <div class="panel panel-default"> 
-      <div class="panel-heading" style="text-align: center;background-color: #3398DB;background-image: none;"> 
-       <span style="color:#FFF;">放款笔数、放款金额</span> 
+      <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+       <span style="color:#FFF;">放款-笔数、放款-金额</span>
       </div> 
       <div class="panel-body"> 
        <ul id="myTab_loan" class="nav nav-tabs"> 
-        <li> <a href="#loan_money_t" data-toggle="tab"> T+1 </a> </li> 
-        <li class="active"> <a href="#loan_money_week" data-toggle="tab"> 最近七日 </a> </li> 
-        <li> <a href="#loan_money_month" data-toggle="tab"> 本月 </a> </li> 
+<!--
+        <li> <a href="#loan_money_t" data-toggle="tab"> T+1 </a> </li>
+-->
+        <li class="active"> <a href="#loan_money_week" data-toggle="tab"> 最近七日 </a> </li>
+     <!--   <li> <a href="#loan_money_month" data-toggle="tab"> 本月 </a> </li>
         <li> <a href="#loan_money_quarter" data-toggle="tab"> 本季度 </a> </li> 
-        <li> <a href="#loan_money_year" data-toggle="tab"> 本年度 </a> </li> 
+        <li> <a href="#loan_money_year" data-toggle="tab"> 本年度 </a> </li> -->
        </ul> 
        <div id="myTabContent_loan" class="tab-content"> 
         <div class="tab-pane fade in" id="loan_money_t"> 
@@ -109,21 +111,21 @@
       </div> 
      </div> 
     </div> 
-   </div> 
+   </div>
 
    <div class="row"> 
     <div class="col-xs-12"> 
      <div class="panel panel-default"> 
-      <div class="panel-heading" style="text-align: center;background-color: #3398DB;background-image: none;"> 
-       <span style="color:#FFF;">还款笔数、还款金额</span> 
+      <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+       <span style="color:#FFF;">还款-笔数、还款-金额</span>
       </div> 
       <div class="panel-body"> 
        <ul id="myTab_repay" class="nav nav-tabs"> 
-        <li> <a href="#repay_money_t" data-toggle="tab"> T+1 </a> </li> 
+        <!--<li> <a href="#repay_money_t" data-toggle="tab"> T+1 </a> </li> -->
         <li class="active"> <a href="#repay_money_week" data-toggle="tab"> 最近七日 </a> </li> 
-        <li> <a href="#repay_money_month" data-toggle="tab"> 本月 </a> </li> 
+      <!--  <li> <a href="#repay_money_month" data-toggle="tab"> 本月 </a> </li>
         <li> <a href="#repay_money_quarter" data-toggle="tab"> 本季度 </a> </li> 
-        <li> <a href="#repay_money_year" data-toggle="tab"> 本年度 </a> </li> 
+        <li> <a href="#repay_money_year" data-toggle="tab"> 本年度 </a> </li> -->
        </ul> 
        <div id="myTabContent_repay" class="tab-content"> 
         <div class="tab-pane fade in" id="repay_money_t"> 
@@ -155,9 +157,102 @@
      </div> 
     </div> 
    </div>
+  </div>
 
-  </div> 
-<script type="text/javascript">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+                        <span style="color:#FFF;">服务费收入</span>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="myTab_service_fee" class="nav nav-tabs">
+                            <!--
+                                                            <li> <a href="#service_fee_t" data-toggle="tab"> T+1 </a> </li>
+                            -->
+                            <li class="active"> <a href="#service_fee_week" data-toggle="tab"> 最近七日 </a> </li>
+                            <!--<li> <a href="#service_fee_month" data-toggle="tab"> 本月 </a> </li>
+                            <li> <a href="#service_fee_quarter" data-toggle="tab"> 本季度 </a> </li>
+                            <li> <a href="#service_fee_year" data-toggle="tab"> 本年度 </a> </li>-->
+                        </ul>
+                        <div id="myTabContent_service_fee" class="tab-content">
+                            <div class="tab-pane fade in" id="service_fee_t">
+                                <div id="container_service_1" style="height: 300px;">
+                                    T + 1
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in active" id="service_fee_week">
+                                <div id="container_service_2" style="height: 300px;">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="service_fee_month">
+                                <div id="container_service_3" style="height: 300px;">
+                                    Month
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="service_fee_quarter">
+                                <div id="container_service_4" style="height: 300px;">
+                                    Quarter
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="service_fee_year">
+                                <div id="container_service_4" style="height: 300px;">
+                                    Year
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text-align: center;background-color: #BD7F3F;background-image: none;">
+                        <span style="color:#FFF;">历史逾期率</span>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="myTab_history_rate" class="nav nav-tabs">
+                            <li> <a href="#history_rate_t" data-toggle="tab"> T+1 </a> </li>
+                            <li class="active"> <a href="#history_rate_week" data-toggle="tab"> 最近七日 </a> </li>
+                            <li> <a href="#history_rate_month" data-toggle="tab"> 本月 </a> </li>
+                            <li> <a href="#history_rate_quarter" data-toggle="tab"> 本季度 </a> </li>
+                            <li> <a href="#history_rate_year" data-toggle="tab"> 本年度 </a> </li>
+                        </ul>
+                        <div id="myTabContent_history_rate" class="tab-content">
+                            <div class="tab-pane fade in" id="history_rate_t">
+                                <div id="container_history_1" style="height: 300px;">
+                                    T + 1
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in active" id="history_rate_week">
+                                <div id="container_history_2" style="height: 300px;">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="history_rate_month">
+                                <div id="container_history_3" style="height: 300px;">
+                                    Month
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="history_rate_quarter">
+                                <div id="container_history_4" style="height: 300px;">
+                                    Quarter
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="history_rate_year">
+                                <div id="container_history_4" style="height: 300px;">
+                                    Year
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <script type="text/javascript">
     var myChart_loan_2 = echarts.init(document.getElementById('container_loan_2'));
 	let option_loan_2 = {
 		color: ['#28BBF4', '#F89B73', '#7778EF', '#69C8C7'],
@@ -397,7 +492,154 @@
 
                 });
 </script>
+        <script type="text/javascript">
+            var myChart_service_2 = echarts.init(document.getElementById('container_service_2'));
+            let option_service_2 = {
+                color: ['#9FB6CD'],
+                title : {
+                    subtext: '服务费收入'
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['收入']
+                },
+                // toolbox: {
+                //     show : true,
+                //     feature : {
+                //         mark : {show: true},
+                //         dataView : {show: true, readOnly: false},
+                //         magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                //         restore : {show: true},
+                //         saveAsImage : {show: true}
+                //     }
+                // },
+                calculable : true,
+                /*xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data: function() {
+                            var list = [];
+                            for (var i = 1; i <= 7; i++) {
+                                list.push('2000-8-' + i);
+                            }
+                            return list;
+                        } ()
+                    }
+                ],*/
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        type: 'category',
+                        data: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        name : '收入(元)'
+                    }
+                ],
+                series : [
+                    {
+                        name:'收入',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data: function() {
+                            var list = [];
+                            for (var i = 1; i <= 7; i++) {
+                                list.push(Math.round(Math.random() * 5000));
+                            }
+                            return list;
+                        } ()
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表
+            myChart_service_2.setOption(option_service_2, true); // 重新渲染曲线图
+            window.onresize = myChart_service_2.resize; // 图表随浏览器拉伸自动变化
+        </script>
 
+
+        <script type="text/javascript">
+            var myChart_history_2 = echarts.init(document.getElementById('container_history_2'));
+            let option_history_2 = {
+                color: ['#CD3700'],
+                title : {
+                    subtext: '历史逾期率'
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['逾期率']
+                },
+                // toolbox: {
+                //     show : true,
+                //     feature : {
+                //         mark : {show: true},
+                //         dataView : {show: true, readOnly: false},
+                //         magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                //         restore : {show: true},
+                //         saveAsImage : {show: true}
+                //     }
+                // },
+                calculable : true,
+               /* xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data: function() {
+                            var list = [];
+                            for (var i = 1; i <= 7; i++) {
+                                list.push('2019-04-' + i);
+                            }
+                            return list;
+                        } ()
+                    }
+                ],*/
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        type: 'category',
+                        data: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        name : '逾期率 %',
+                        axisLabel: {
+                            formatter: '{value}%'
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'逾期率',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data: function() {
+                            var list = [];
+                            for (var i = 1; i <= 7; i++) {
+                                list.push(Math.round(Math.random() * 1));
+                            }
+                            return list;
+                        } ()
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表
+            myChart_history_2.setOption(option_history_2, true); // 重新渲染曲线图
+            window.onresize = myChart_history_2.resize; // 图表随浏览器拉伸自动变化
+        </script>
 		<script type="text/javascript">
 			$(function(){
 				$('#myTab_loan a').click(function (e) {
@@ -405,7 +647,7 @@
 				  $(this).tab('show');
 				});
 			});
-		</script> 
+		</script>
 
 		<script src="assets/js/jquery-2.1.4.js"></script>
 	    <script src="assets/js/bootstrap.min.js"></script>
@@ -413,5 +655,6 @@
 	    <script src="assets/js/isotope.pkgd.min.js"></script>
 	    <script src="assets/js/owl.carousel.js"></script>
 	    <script src="assets/js/main.js"></script>
+
 	</body>
 </html>
