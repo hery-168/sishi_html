@@ -583,34 +583,11 @@
                 legend: {
                     data:['逾期率']
                 },
-                // toolbox: {
-                //     show : true,
-                //     feature : {
-                //         mark : {show: true},
-                //         dataView : {show: true, readOnly: false},
-                //         magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-                //         restore : {show: true},
-                //         saveAsImage : {show: true}
-                //     }
-                // },
-                calculable : true,
-               /* xAxis : [
+              calculable : true,
+              xAxis : [
                     {
                         type : 'category',
-                        boundaryGap : false,
-                        data: function() {
-                            var list = [];
-                            for (var i = 1; i <= 7; i++) {
-                                list.push('2019-04-' + i);
-                            }
-                            return list;
-                        } ()
-                    }
-                ],*/
-                xAxis : [
-                    {
-                        type : 'category',
-                        boundaryGap : false,
+                        boundaryGap : true,
                         type: 'category',
                         data: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
                     }
