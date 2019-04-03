@@ -301,7 +301,7 @@
 			data: function() {
 				var list = [];
 				for (var i = 1; i <= 7; i++) {
-					list.push('2019-04-' + i);
+					list.push('2016-01-' + i);
 				}
 				return list;
 			} ()
@@ -421,7 +421,7 @@
 			data: function() {
 				var list = [];
 				for (var i = 1; i <= 7; i++) {
-					list.push('2019-04-' + i);
+					list.push('2017-01-' + i);
 				}
 				return list;
 			} ()
@@ -505,36 +505,18 @@
                 legend: {
                     data:['收入']
                 },
-                // toolbox: {
-                //     show : true,
-                //     feature : {
-                //         mark : {show: true},
-                //         dataView : {show: true, readOnly: false},
-                //         magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-                //         restore : {show: true},
-                //         saveAsImage : {show: true}
-                //     }
-                // },
                 calculable : true,
-                /*xAxis : [
+                xAxis : [
                     {
-                        type : 'category',
-                        boundaryGap : false,
+                        type: 'category',
+                        boundaryGap: false,
                         data: function() {
                             var list = [];
                             for (var i = 1; i <= 7; i++) {
-                                list.push('2000-8-' + i);
+                                list.push('2018-01-' + i);
                             }
                             return list;
                         } ()
-                    }
-                ],*/
-                xAxis : [
-                    {
-                        type : 'category',
-                        boundaryGap : false,
-                        type: 'category',
-                        data: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
                     }
                 ],
                 yAxis : [
@@ -548,7 +530,7 @@
                         name:'收入',
                         type:'line',
                         smooth:true,
-                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        //itemStyle: {normal: {areaStyle: {type: 'default'}}},
                         data: function() {
                             var list = [];
                             for (var i = 1; i <= 7; i++) {
@@ -573,60 +555,59 @@
         <script type="text/javascript">
             var myChart_history_2 = echarts.init(document.getElementById('container_history_2'));
             option_history_2 = {
-                color: ['#CD3700'],
-                title : {
-                    subtext: '历史逾期率'
-                },
-                tooltip : {
-                    trigger: 'axis'
-                },
-                legend: {
-                    data:['逾期率']
-                },
-              calculable : true,
-              xAxis : [
-                    {
-                        type : 'category',
-                        boundaryGap : true,
-                        type: 'category',
-                        data: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
-                    }
-                ],
-                yAxis : [
-                    {
-                        type : 'value',
-                        name : '逾期率 %',
-                        axisLabel: {
-                            formatter: '{value}%'
-                        }
-                    }
-                ],
-                series : [
-                    {
-                        name:'逾期率',
-                        type:'line',
-                        smooth:true,
-                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                        data: function() {
-                            var list = [];
-                            for (var i = 1; i <= 7; i++) {
-                                list.push(Math.round(Math.random() * 1));
-                            }
-                            return list;
-                        } ()
-                    }
-                ]
-            };
+                    color: ['#CD3700'],
+                            title : {
+                                subtext: '历史逾期率'
+                            },
+                            tooltip : {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['逾期率 %']
+                            },
+                          calculable : true,
+                                xAxis: {
+                                    type: 'category',
+                                    boundaryGap: false,
+                                    data: function() {
+                                        var list = [];
+                                        for (var i = 1; i <= 7; i++) {
+                                            list.push('2019-01-' + i);
+                                        }
+                                        return list;
+                                    } ()
+                                },
+                                yAxis: [{
+                                    type : 'value',
+                                    name : '逾期率 %',
+                                    axisLabel: {
+                                        formatter: '{value}%'
+                                    }
+                                }],
+                                series: [{
+                                            name:'逾期',
+                                            type:'line',
+                                            smooth:true,
+                                           // itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                                            data: function() {
+                                                var list = [];
+                                                for (var i = 1; i <= 7; i++) {
+                                                    list.push(Math.round(Math.random() * 10));
+                                                }
+                                                return list;
+                                            } ()
+                    }]
+         };
 
-            // 使用刚指定的配置项和数据显示图表
-            myChart_history_2.setOption(option_history_2, true); // 重新渲染曲线图
-            window.addEventListener("resize",function(){
+                        // 使用刚指定的配置项和数据显示图表
+                        myChart_history_2.setOption(option_history_2, true); // 重新渲染曲线图
+                        window.addEventListener("resize",function(){
 
-                myChart_history_2.resize();
+                            myChart_history_2.resize();
 
-            });
+                        });
 
-        </script>
+</script>
 		<script type="text/javascript">
 			$(function(){
 				$('#myTab_loan a').click(function (e) {
