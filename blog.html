@@ -111,6 +111,12 @@
          ]
      };
      myChart_sex.setOption(sex_option);
+               window.addEventListener("resize",function(){
+
+                        myChart_sex.resize();
+
+                });
+
 
      age_option = {
          title : {
@@ -156,6 +162,11 @@
          ]
      };
      myChart_age.setOption(age_option);
+          window.addEventListener("resize",function(){
+
+                        myChart_age.resize();
+
+                });
 
      edu_option = {
          title : {
@@ -206,6 +217,12 @@
          ]
      };
      myChart_edu.setOption(edu_option);
+      window.addEventListener("resize",function(){
+
+                        myChart_edu.resize();
+
+                });
+
 
      income_option = {
          title : {
@@ -246,9 +263,19 @@
          ]
      };
      myChart_income.setOption(income_option);
+        window.addEventListener("resize",function(){
+
+                        myChart_income.resize();
+
+                });
 
 
      option_city10 = {
+         title : {
+             text: '城市TOP5',
+             // subtext: '纯属虚构',
+             x:'center'
+         },
          color: ['#3398DB'],
          tooltip : {
              trigger: 'axis',
@@ -265,7 +292,7 @@
          xAxis : [
              {
                  type : 'category',
-                 data : ['北京', '上海', '南京', '张家口', '唐山', '杭州', '天津'],
+                 data : ['北京', '上海', '南京', '张家口', '唐山'],
                  axisTick: {
                      alignWithLabel: true
                  }
@@ -281,11 +308,16 @@
                  name:'直接访问',
                  type:'bar',
                  barWidth: '60%',
-                 data:[630, 521, 488, 450, 300, 210, 180]
+                 data:[630, 521, 488, 450, 300]
              }
          ]
      };
      myChart_city10.setOption(option_city10);
+      window.addEventListener("resize",function(){
+
+                        myChart_city10.resize();
+
+                });
 
 
      option_city = {
@@ -376,16 +408,18 @@
             ]
      };
      myChart_city.setOption(option_city);
+     window.addEventListener("resize",function(){
+
+                        myChart_city.resize();
+
+                });
  </script>
  <!-- 日历 -->
 <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap-datepicker.min.js"> </script>
 <script type="text/javascript" src="assets/js/bootstrap/locales/bootstrap-datepicker.zh-CN.min.js"> </script>
 <!-- 日历 -->
-<script type="text/javascript">
-$(function(){
-   initDate();
-});
-	
+
+
 		<script src="assets/js/jquery-2.1.4.js"></script>
 	    <script src="assets/js/bootstrap.min.js"></script>
 	    <script src="assets/js/jquery.slicknav.js"></script>

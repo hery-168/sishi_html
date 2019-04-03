@@ -283,39 +283,8 @@
 			data: ['笔数', '金额'],
 			//属性类别
 			selectedMode: 'multiple'
-			//选中模式
-			// selected: { //初始默认后面一条数据不显示
-			// 	'金额': false
-			// }
 		},
 
-		// toolbox: {
-		// 	show: true,
-		// 	orient: 'vertical',
-		// 	left: 'right',
-		// 	top: 'center',
-		// 	feature: {
-		// 		mark: {
-		// 			show: true
-		// 		},
-		// 		dataZoom: {
-		// 			show: true
-		// 		},
-		// 		dataView: {
-		// 			show: true
-		// 		},
-		// 		magicType: {
-		// 			show: true,
-		// 			type: ['line', 'bar', 'stack', 'tiled']
-		// 		},
-		// 		restore: {
-		// 			show: true
-		// 		},
-		// 		saveAsImage: {
-		// 			show: true
-		// 		}
-		// 	}
-		// },
 		grid: {
 			left: '8%',
 			//y轴离左侧边框边距
@@ -326,20 +295,6 @@
 			containLabel: true
 		},
 		calculable: true,
-		// dataZoom: {
-		// 	show: true,
-		// 	realtime: true,
-		// 	type: 'slider',
-		// 	// slider表示有滑动块的，inside表示内置的
-		// 	bottom: "5%",
-		// 	start: 20,
-		// 	// 初始x轴位置在最右边
-		// 	end: 60,
-		// 	// 初始x轴位置在最右边
-		// 	borderColor: "transparent",
-		// 	// 滚动条边框颜色
-		// 	height: 20
-		// },
 		xAxis: [{
 			type: 'category',
 			boundaryGap: false,
@@ -355,13 +310,6 @@
 		yAxis: [{
 			type: 'value',
 			name: "放款笔数",
-			// nameLocation:"center", //设置左右两侧y轴名称位置
-			// nameGap:35,
-			// nameRotate:0,
-			// nameTextStyle:{
-			// fontSize: 16,
-			// },
-			//默认以千分位显示，不想用的可以在这加一段
 			axisLabel: { //调整左侧Y轴刻度， 直接按对应数据显示
 				show: true,
 				showMinLabel: true,
@@ -416,8 +364,13 @@
 	};
 
 	// 使用刚指定的配置项和数据显示图表
-	myChart_loan_2.setOption(option_loan_2, true); // 重新渲染曲线图
-	window.onresize = myChart_loan_2.resize; // 图表随浏览器拉伸自动变化
+	myChart_loan_2.setOption(option_loan_2); // 重新渲染曲线图
+	window.addEventListener("resize",function(){
+
+                        myChart_loan_2.resize();
+
+                });
+	
 </script> 
 <script type="text/javascript">
     var myChart_repay_2 = echarts.init(document.getElementById('container_repay_2'));
@@ -450,39 +403,8 @@
 			data: ['笔数', '金额'],
 			//属性类别
 			selectedMode: 'multiple'
-			//选中模式
-			// selected: { //初始默认后面一条数据不显示
-			// 	'金额': false
-			// }
-		},
+			},
 
-		// toolbox: {
-		// 	show: true,
-		// 	orient: 'vertical',
-		// 	left: 'right',
-		// 	top: 'center',
-		// 	feature: {
-		// 		mark: {
-		// 			show: true
-		// 		},
-		// 		dataZoom: {
-		// 			show: true
-		// 		},
-		// 		dataView: {
-		// 			show: true
-		// 		},
-		// 		magicType: {
-		// 			show: true,
-		// 			type: ['line', 'bar', 'stack', 'tiled']
-		// 		},
-		// 		restore: {
-		// 			show: true
-		// 		},
-		// 		saveAsImage: {
-		// 			show: true
-		// 		}
-		// 	}
-		// },
 		grid: {
 			left: '8%',
 			//y轴离左侧边框边距
@@ -493,20 +415,6 @@
 			containLabel: true
 		},
 		calculable: true,
-		// dataZoom: {
-		// 	show: true,
-		// 	realtime: true,
-		// 	type: 'slider',
-		// 	// slider表示有滑动块的，inside表示内置的
-		// 	bottom: "5%",
-		// 	start: 20,
-		// 	// 初始x轴位置在最右边
-		// 	end: 60,
-		// 	// 初始x轴位置在最右边
-		// 	borderColor: "transparent",
-		// 	// 滚动条边框颜色
-		// 	height: 20
-		// },
 		xAxis: [{
 			type: 'category',
 			boundaryGap: false,
@@ -522,13 +430,6 @@
 		yAxis: [{
 			type: 'value',
 			name: "还款笔数",
-			// nameLocation:"center", //设置左右两侧y轴名称位置
-			// nameGap:35,
-			// nameRotate:0,
-			// nameTextStyle:{
-			// fontSize: 16,
-			// },
-			//默认以千分位显示，不想用的可以在这加一段
 			axisLabel: { //调整左侧Y轴刻度， 直接按对应数据显示
 				show: true,
 				showMinLabel: true,
@@ -583,8 +484,13 @@
 	};
 
 	// 使用刚指定的配置项和数据显示图表
-	myChart_repay_2.setOption(option_repay_2, true); // 重新渲染曲线图
-	window.onresize = myChart_repay_2.resize; // 图表随浏览器拉伸自动变化
+	myChart_repay_2.setOption(option_repay_2); // 重新渲染曲线图
+
+	window.addEventListener("resize",function(){
+
+                        myChart_repay_2.resize();
+
+                });
 </script>
         <script type="text/javascript">
             var myChart_service_2 = echarts.init(document.getElementById('container_service_2'));
