@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>华悦数金</title>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Quattrocento+Sans:400,700|Palanquin:400,600|Raleway|Josefin+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/css/font-awesome.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+   
+  	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+  <style type="text/css">
+  	.nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    	color: #555;
+	}
+  	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	    color: #3398DB;
+	}
+	.nav > li > a{
+		padding: 10px 9px;
+	}
+  </style> 
+
+	</head>
+	<body>
+
+         
+
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="logo">
+							<h2><a href="index.html">华悦数金</a></h2>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div id="menu" class="menu">
+							<ul>
+								<li><a href="index.html">概况总览</a></li>
+								<li><a href="about.html" class="active">业务曲线</a></li>
+								<li><a href="blog.html">用户画像</a></li>
+								<li><a href="contact.html">联系方式</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div class="container"> 
+   <div class="row"> 
+    <div class="col-xs-12"> 
+     <div class="panel panel-default"> 
+      <div class="panel-heading" style="text-align: center;background-color: #3398DB;background-image: none;"> 
+       <span style="color:#FFF;">放款笔数、放款金额</span> 
+      </div> 
+      <div class="panel-body"> 
+       <ul id="myTab_loan" class="nav nav-tabs"> 
+        <li> <a href="#loan_money_t" data-toggle="tab"> T+1 </a> </li> 
+        <li class="active"> <a href="#loan_money_week" data-toggle="tab"> 最近七日 </a> </li> 
+        <li> <a href="#loan_money_month" data-toggle="tab"> 本月 </a> </li> 
+        <li> <a href="#loan_money_quarter" data-toggle="tab"> 本季度 </a> </li> 
+        <li> <a href="#loan_money_year" data-toggle="tab"> 本年度 </a> </li> 
+       </ul> 
+       <div id="myTabContent_loan" class="tab-content"> 
+        <div class="tab-pane fade in" id="loan_money_t"> 
+         <div id="container_loan_1" style="height: 300px;">
+         	T + 1
+         </div> 
+        </div> 
+        <div class="tab-pane fade in active" id="loan_money_week"> 
+         <div id="container_loan_2" style="height: 300px;">
+         </div> 
+        </div> 
+        <div class="tab-pane fade in" id="loan_money_month"> 
+         <div id="container_loan_3" style="height: 300px;">
+           Month
+         </div> 
+        </div> 
+        <div class="tab-pane fade in" id="loan_money_quarter"> 
+         <div id="container_loan_4" style="height: 300px;">
+           Quarter
+         </div> 
+        </div> 
+        <div class="tab-pane fade in" id="loan_money_year"> 
+         <div id="container_loan_4" style="height: 300px;">
+           Year
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+
+   <div class="row"> 
+    <div class="col-xs-12"> 
+     <div class="panel panel-default"> 
+      <div class="panel-heading" style="text-align: center;background-color: #3398DB;background-image: none;"> 
+       <span style="color:#FFF;">还款笔数、还款金额</span> 
+      </div> 
+      <div class="panel-body"> 
+       <ul id="myTab_repay" class="nav nav-tabs"> 
+        <li> <a href="#repay_money_t" data-toggle="tab"> T+1 </a> </li> 
+        <li class="active"> <a href="#repay_money_week" data-toggle="tab"> 最近七日 </a> </li> 
+        <li> <a href="#repay_money_month" data-toggle="tab"> 本月 </a> </li> 
+        <li> <a href="#repay_money_quarter" data-toggle="tab"> 本季度 </a> </li> 
+        <li> <a href="#repay_money_year" data-toggle="tab"> 本年度 </a> </li> 
+       </ul> 
+       <div id="myTabContent_repay" class="tab-content"> 
+        <div class="tab-pane fade in" id="repay_money_t"> 
+         <div id="container_repay_1" style="height: 300px;">
+         	T + 1
+         </div> 
+        </div> 
+        <div class="tab-pane fade in active" id="repay_money_week"> 
+         <div id="container_repay_2" style="height: 300px;">
+         </div> 
+        </div> 
+        <div class="tab-pane fade in" id="repay_money_month"> 
+         <div id="container_repay_3" style="height: 300px;">
+           Month
+         </div> 
+        </div> 
+        <div class="tab-pane fade in" id="repay_money_quarter"> 
+         <div id="container_repay_4" style="height: 300px;">
+           Quarter
+         </div> 
+        </div> 
+        <div class="tab-pane fade in" id="repay_money_year"> 
+         <div id="container_repay_4" style="height: 300px;">
+           Year
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+
+  </div> 
+<script type="text/javascript">
+    var myChart_loan_2 = echarts.init(document.getElementById('container_loan_2'));
+	let option_loan_2 = {
+		color: ['#28BBF4', '#F89B73', '#7778EF', '#69C8C7'],
+		//修改曲线颜色
+		title: {
+			x: 'left',
+			//标题居中
+			subtext: '放款曲线图'
+		},
+		tooltip: {
+			trigger: 'axis',
+			showDelay: 0,
+			axisPointer: {
+				show: true,
+				type: 'cross',
+				lineStyle: {
+					type: 'dashed',
+					width: 1
+				}
+			}
+		},
+
+		legend: {
+			y: 'top',
+			//图例说明(属性)在底部显示，不写默认在顶部显示
+			type: 'scroll',
+			//图例说明(属性)过多时，设置为scroll，加上滚动翻页
+			data: ['笔数', '金额'],
+			//属性类别
+			selectedMode: 'multiple'
+			//选中模式
+			// selected: { //初始默认后面一条数据不显示
+			// 	'金额': false
+			// }
+		},
+
+		// toolbox: {
+		// 	show: true,
+		// 	orient: 'vertical',
+		// 	left: 'right',
+		// 	top: 'center',
+		// 	feature: {
+		// 		mark: {
+		// 			show: true
+		// 		},
+		// 		dataZoom: {
+		// 			show: true
+		// 		},
+		// 		dataView: {
+		// 			show: true
+		// 		},
+		// 		magicType: {
+		// 			show: true,
+		// 			type: ['line', 'bar', 'stack', 'tiled']
+		// 		},
+		// 		restore: {
+		// 			show: true
+		// 		},
+		// 		saveAsImage: {
+		// 			show: true
+		// 		}
+		// 	}
+		// },
+		grid: {
+			left: '8%',
+			//y轴离左侧边框边距
+			right: '6%',
+			//y轴离右侧边框边距
+			bottom: '12%',
+			//x轴离底部边框边距
+			containLabel: true
+		},
+		calculable: true,
+		// dataZoom: {
+		// 	show: true,
+		// 	realtime: true,
+		// 	type: 'slider',
+		// 	// slider表示有滑动块的，inside表示内置的
+		// 	bottom: "5%",
+		// 	start: 20,
+		// 	// 初始x轴位置在最右边
+		// 	end: 60,
+		// 	// 初始x轴位置在最右边
+		// 	borderColor: "transparent",
+		// 	// 滚动条边框颜色
+		// 	height: 20
+		// },
+		xAxis: [{
+			type: 'category',
+			boundaryGap: false,
+			data: function() {
+				var list = [];
+				for (var i = 1; i <= 7; i++) {
+					list.push('2019-04-' + i);
+				}
+				return list;
+			} ()
+		}],
+
+		yAxis: [{
+			type: 'value',
+			name: "放款笔数",
+			// nameLocation:"center", //设置左右两侧y轴名称位置
+			// nameGap:35,
+			// nameRotate:0,
+			// nameTextStyle:{
+			// fontSize: 16,
+			// },
+			//默认以千分位显示，不想用的可以在这加一段
+			axisLabel: { //调整左侧Y轴刻度， 直接按对应数据显示
+				show: true,
+				showMinLabel: true,
+				showMaxLabel: true,
+				formatter: function(value) {
+					return value;
+				}
+			}
+		},
+		{
+			type: 'value',
+			name: "放款金额(元)",
+			//默认以千分位显示，不想用的可以在这加一段
+			axisLabel: { //调整左侧Y轴刻度， 直接按对应数据显示
+				show: true,
+				showMinLabel: true,
+				showMaxLabel: true,
+				formatter: function(value) {
+					return value;
+				}
+			}
+		}],
+		series: [
+		{
+			name: '笔数',
+			type: 'line',
+			smooth: true,
+			yAxisIndex: 0,
+			//属性，归属左侧y轴
+			data: function() {
+				var list = [];
+				for (var i = 1; i <= 7; i++) {
+					list.push(Math.round(Math.random() * 3000));
+				}
+				return list;
+			} ()
+		},
+		{
+			name: '金额',
+			type: 'line',
+			smooth: true,
+			yAxisIndex: 1,
+			//属性，归属右侧y轴
+			data: function() {
+				var list = [];
+				for (var i = 1; i <= 7; i++) {
+					list.push(Math.round(Math.random() * 10000000));
+				}
+				return list;
+			} ()
+		}]
+	};
+
+	// 使用刚指定的配置项和数据显示图表
+	myChart_loan_2.setOption(option_loan_2, true); // 重新渲染曲线图
+	window.onresize = myChart_loan_2.resize; // 图表随浏览器拉伸自动变化
+</script> 
+<script type="text/javascript">
+    var myChart_repay_2 = echarts.init(document.getElementById('container_repay_2'));
+	let option_repay_2 = {
+		color: ['#28BBF4', '#F89B73', '#7778EF', '#69C8C7'],
+		//修改曲线颜色
+		title: {
+			x: 'left',
+			//标题居中
+			subtext: '还款曲线图'
+		},
+		tooltip: {
+			trigger: 'axis',
+			showDelay: 0,
+			axisPointer: {
+				show: true,
+				type: 'cross',
+				lineStyle: {
+					type: 'dashed',
+					width: 1
+				}
+			}
+		},
+
+		legend: {
+			y: 'top',
+			//图例说明(属性)在底部显示，不写默认在顶部显示
+			type: 'scroll',
+			//图例说明(属性)过多时，设置为scroll，加上滚动翻页
+			data: ['笔数', '金额'],
+			//属性类别
+			selectedMode: 'multiple'
+			//选中模式
+			// selected: { //初始默认后面一条数据不显示
+			// 	'金额': false
+			// }
+		},
+
+		// toolbox: {
+		// 	show: true,
+		// 	orient: 'vertical',
+		// 	left: 'right',
+		// 	top: 'center',
+		// 	feature: {
+		// 		mark: {
+		// 			show: true
+		// 		},
+		// 		dataZoom: {
+		// 			show: true
+		// 		},
+		// 		dataView: {
+		// 			show: true
+		// 		},
+		// 		magicType: {
+		// 			show: true,
+		// 			type: ['line', 'bar', 'stack', 'tiled']
+		// 		},
+		// 		restore: {
+		// 			show: true
+		// 		},
+		// 		saveAsImage: {
+		// 			show: true
+		// 		}
+		// 	}
+		// },
+		grid: {
+			left: '8%',
+			//y轴离左侧边框边距
+			right: '6%',
+			//y轴离右侧边框边距
+			bottom: '12%',
+			//x轴离底部边框边距
+			containLabel: true
+		},
+		calculable: true,
+		// dataZoom: {
+		// 	show: true,
+		// 	realtime: true,
+		// 	type: 'slider',
+		// 	// slider表示有滑动块的，inside表示内置的
+		// 	bottom: "5%",
+		// 	start: 20,
+		// 	// 初始x轴位置在最右边
+		// 	end: 60,
+		// 	// 初始x轴位置在最右边
+		// 	borderColor: "transparent",
+		// 	// 滚动条边框颜色
+		// 	height: 20
+		// },
+		xAxis: [{
+			type: 'category',
+			boundaryGap: false,
+			data: function() {
+				var list = [];
+				for (var i = 1; i <= 7; i++) {
+					list.push('2019-04-' + i);
+				}
+				return list;
+			} ()
+		}],
+
+		yAxis: [{
+			type: 'value',
+			name: "还款笔数",
+			// nameLocation:"center", //设置左右两侧y轴名称位置
+			// nameGap:35,
+			// nameRotate:0,
+			// nameTextStyle:{
+			// fontSize: 16,
+			// },
+			//默认以千分位显示，不想用的可以在这加一段
+			axisLabel: { //调整左侧Y轴刻度， 直接按对应数据显示
+				show: true,
+				showMinLabel: true,
+				showMaxLabel: true,
+				formatter: function(value) {
+					return value;
+				}
+			}
+		},
+		{
+			type: 'value',
+			name: "还款金额(元)",
+			//默认以千分位显示，不想用的可以在这加一段
+			axisLabel: { //调整左侧Y轴刻度， 直接按对应数据显示
+				show: true,
+				showMinLabel: true,
+				showMaxLabel: true,
+				formatter: function(value) {
+					return value;
+				}
+			}
+		}],
+		series: [
+		{
+			name: '笔数',
+			type: 'line',
+			smooth: true,
+			yAxisIndex: 0,
+			//属性，归属左侧y轴
+			data: function() {
+				var list = [];
+				for (var i = 1; i <= 7; i++) {
+					list.push(Math.round(Math.random() * 3000));
+				}
+				return list;
+			} ()
+		},
+		{
+			name: '金额',
+			type: 'line',
+			smooth: true,
+			yAxisIndex: 1,
+			//属性，归属右侧y轴
+			data: function() {
+				var list = [];
+				for (var i = 1; i <= 7; i++) {
+					list.push(Math.round(Math.random() * 10000000));
+				}
+				return list;
+			} ()
+		}]
+	};
+
+	// 使用刚指定的配置项和数据显示图表
+	myChart_repay_2.setOption(option_repay_2, true); // 重新渲染曲线图
+	window.onresize = myChart_repay_2.resize; // 图表随浏览器拉伸自动变化
+</script>
+
+		<script type="text/javascript">
+			$(function(){
+				$('#myTab_loan a').click(function (e) {
+				  e.preventDefault();
+				  $(this).tab('show');
+				});
+			});
+		</script> 
+
+		<script src="assets/js/jquery-2.1.4.js"></script>
+	    <script src="assets/js/bootstrap.min.js"></script>
+	    <script src="assets/js/jquery.slicknav.js"></script>
+	    <script src="assets/js/isotope.pkgd.min.js"></script>
+	    <script src="assets/js/owl.carousel.js"></script>
+	    <script src="assets/js/main.js"></script>
+	</body>
+</html>
